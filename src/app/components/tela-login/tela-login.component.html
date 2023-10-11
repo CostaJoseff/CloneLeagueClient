@@ -1,0 +1,62 @@
+<div id="conteudo">
+  <div id="ladoEsquerdo">
+    <div id="conteudoLadoEsquerdo">
+      <div id="logo">
+        <img src="../../../assets/icons/Riot_Games_2019_29.png" alt="" draggable="false">
+        <h1 id="riotTitulo">RIOT GAMES</h1>
+      </div>
+      <h1>Fazer login</h1>
+      <div id="caixasDeLog">
+        <input type="text" placeholder="NOME DE USUÁRIO" 
+          [(ngModel)]="nomeUsuario" 
+          (input)="liberarLogin()" 
+          (click)="resetFalha()"
+          [ngStyle]="{
+            'color' : falhaNoLogin ? 'var(--rosa-erro)' : '',
+            'border-color' : falhaNoLogin ? 'var(--rosa-erro-transparente)' : '',
+            'border-style' : falhaNoLogin ? 'solid' : 'none',
+            'border-width' : falhaNoLogin ? '4px' : '',
+            'background-color' : falhaNoLogin ? 'var(--rosa-erro-transparente-2)' : ''
+          }">
+        <input type="password" placeholder="SENHA" 
+          [(ngModel)]="senha" 
+          (input)="liberarLogin()"
+          (click)="resetFalha()"
+          [ngStyle]="{
+            'color' : falhaNoLogin ? 'var(--rosa-erro)' : '',
+            'border-color' : falhaNoLogin ? 'var(--rosa-erro-transparente)' : '',
+            'border-style' : falhaNoLogin ? 'solid' : 'none',
+            'border-width' : falhaNoLogin ? '4px' : '',
+            'background-color' : falhaNoLogin ? 'var(--rosa-erro-transparente-2)' : ''
+          }">
+      </div>
+      <div id="logRedeSocial">
+        <button class="social pointer" id="fcb"></button>
+        <button class="social pointer" id="ggl"></button>
+        <button class="social pointer" id="apl"></button>
+        <button class="social pointer" id="xbx"></button>
+      </div>
+      <div id="manterLogin">
+        <input id="checkBox" class="pointer" type="checkBox" [checked]="loginMantido" (click)="manterLogin()">
+        <label for="checkBox" class="pointer noDrag"><p>Manter Login</p></label>
+      </div>
+      <button 
+        id="logar" 
+        [disabled]="!loginDisponivel"
+        [ngStyle]="{
+          'cursor': loginDisponivel ? 'pointer' : 'default',
+          'background-color' : loginDisponivel ? 'var(--vermelho-menu)' : ''
+        }"
+        (click)="logar()"
+      ></button>
+      <div id="erros">
+        <p class="pointer erros">NÃO CONSEGUE INICIAR SESSÃO?</p>
+        <p class="pointer erros" routerLink="/cadastrar">CRIAR CONTA</p>
+      </div>
+    </div>
+  </div>
+  <div id="ladoDireito"
+    [ngStyle]="backgroundIMG"
+  >
+  </div>
+</div>

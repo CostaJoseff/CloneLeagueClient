@@ -1,0 +1,28 @@
+
+<div id="conteudo">
+  <div id="ladoEsquerdo">
+    <div id="conteudoLadoEsquerdo">
+      <div id="logo">
+        <img src="../../../assets/icons/Riot_Games_2019_29.png" alt="" draggable="false">
+        <h1 id="riotTitulo">RIOT GAMES</h1>
+      </div>
+      <h1>Cadastrar</h1>
+      <div id="caixasDeLog">
+        <input type="text" placeholder="Nick Name" [(ngModel)]="nickName" (input)="liberarCadastro()">
+        <input type="text" placeholder="Nome de acesso" [(ngModel)]="nomeDeAcesso" (input)="liberarCadastro()">
+        <input type="text" placeholder="Email" [(ngModel)]="email" (input)="liberarCadastro()">
+        <input type="password" placeholder="Senha" [(ngModel)]="senha" (input)="liberarCadastro()">
+      </div>
+      <button [disabled]="!cadastroDisponivel" id="cadastrar" 
+        [ngStyle]="{
+          'cursor': cadastroDisponivel ? 'pointer' : 'default',
+          'background-color' : cadastroDisponivel ? 'var(--vermelho-menu)' : ''
+        }"
+      >CADASTRAR</button>
+    </div>
+  </div>
+  <div id="ladoDireito"
+    [ngStyle]="backgroundIMG"
+  >
+  </div>
+</div>

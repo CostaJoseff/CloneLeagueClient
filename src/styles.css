@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  width: 2160.5px;
+  min-width: 2160.5px;
+}
+
+:root {
+  --vermelho-menu: rgb(209, 56, 57);
+  --cinza-sem-foco: rgb(237, 237, 237);
+  --rosa-erro: rgb(191, 47, 205);
+  --rosa-erro-transparente: rgba(192, 47, 205, 0.308);
+  --rosa-erro-transparente-2: rgba(192, 47, 205, 0.144);
+}
