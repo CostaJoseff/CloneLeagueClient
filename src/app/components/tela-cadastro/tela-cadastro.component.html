@@ -1,4 +1,3 @@
-
 <div id="conteudo">
   <div id="ladoEsquerdo">
     <div id="conteudoLadoEsquerdo">
@@ -8,17 +7,21 @@
       </div>
       <h1>Cadastrar</h1>
       <div id="caixasDeLog">
-        <input type="text" placeholder="Nick Name" [(ngModel)]="nickName" (input)="liberarCadastro()">
-        <input type="text" placeholder="Nome de acesso" [(ngModel)]="nomeDeAcesso" (input)="liberarCadastro()">
-        <input type="text" placeholder="Email" [(ngModel)]="email" (input)="liberarCadastro()">
-        <input type="password" placeholder="Senha" [(ngModel)]="senha" (input)="liberarCadastro()">
+        <input type="text" placeholder="NICK NAME" [(ngModel)]="nickName" (input)="liberarCadastro()">
+        <input type="text" placeholder="NOME DE ACESSO" [(ngModel)]="nomeDeAcesso" (input)="liberarCadastro()">
+        <input type="text" placeholder="EMAIL" [(ngModel)]="email" (input)="liberarCadastro()">
+        <input type="password" placeholder="SENHA" [(ngModel)]="senha" (input)="liberarCadastro()">
       </div>
-      <button [disabled]="!cadastroDisponivel" id="cadastrar" 
+      <button [disabled]="!cadastroDisponivel" id="criarConta" 
         [ngStyle]="{
           'cursor': cadastroDisponivel ? 'pointer' : 'default',
-          'background-color' : cadastroDisponivel ? 'var(--vermelho-menu)' : ''
+          'background-color' : cadastroDisponivel ? 'var(--vermelho-menu)' : '',
+          'color' : cadastroDisponivel ? 'white' : ''
         }"
-      >CADASTRAR</button>
+      >CRIAR CONTA</button>
+      <div id="erros">
+        <p class="pointer erros" routerLink="">JÁ ESTÁ CADASTRADO ?</p>
+      </div>
     </div>
   </div>
   <div id="ladoDireito"

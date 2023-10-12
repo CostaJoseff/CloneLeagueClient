@@ -4,7 +4,7 @@ import { util } from '../../../assets/ts/util';
 @Component({
   selector: 'app-tela-cadastro',
   templateUrl: './tela-cadastro.component.html',
-  styleUrls: ['./tela-cadastro.component.css']
+  styleUrls: ['./tela-cadastro.component.css','../tela-cadastro-login.css']
 })
 export class TelaCadastroComponent {
 

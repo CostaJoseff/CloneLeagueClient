@@ -6,7 +6,7 @@ import { util } from '../../../assets/ts/util';
 @Component({
   selector: 'app-tela-login',
   templateUrl: './tela-login.component.html',
-  styleUrls: ['./tela-login.component.css']
+  styleUrls: ['./tela-login.component.css','../tela-cadastro-login.css']
 })
 export class TelaLoginComponent {
   public nomeUsuario: string;
